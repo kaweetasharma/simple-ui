@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:wght@400;700&display=swap');
+
+body {
+  background-color: rgb(239, 243, 243);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: rgb(70, 70, 70);
+}
+
+.header {
+  padding: 20px;
+  text-align: center;
+  background-color: #349;
+  color: white;
+  width: 100%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.main-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.project-box {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-box a {
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #349;
+  font-weight: 700;
+}
+
+.footer {
+  background-color: #349;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .project-box {
+    width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 550px) {
+  .project-box {
+    width: calc(100% - 40px);
+  }
+  .header h1 {
+    font-size: 1.5rem;
+  }
+}

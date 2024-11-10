@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: black;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 80vw;
+  max-width: 1200px;
+  height: 80vh;
+}
+.card {
+  margin-left: 5px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  flex: 0.5;
+  transition: flex cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+.card h1 {
+  position: absolute;
+  bottom: 2px;
+  background-color: aliceblue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity ease-out 0.3s;
+}
+
+.card.active {
+  flex: 3;
+}
+.card.active > h1 {
+  opacity: 1;
+}
+
+.red {
+  background-color: red;
+  color: red;
+  margin-left: 0;
+}
+.blue {
+  background-color: blue;
+  color: blue;
+}
+.green {
+  background-color: green;
+  color: green;
+}
+.yellow {
+  background-color: yellow;
+  color: yellow;
+}
+.skyblue {
+  background-color: skyblue;
+  color: skyblue;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 100vw;
+  }
+  .card:nth-of-type(4),
+  .card:nth-of-type(5) {
+    display: none;
+  }
+}

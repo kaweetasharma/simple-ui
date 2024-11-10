@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  background-color: #333;
+}
+.container {
+  background-color: peru;
+}
+
+.container {
+  background: #faf;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 50px;
+}
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+#x-axis {
+  position: absolute;
+  background-color: red;
+  height: 2px;
+  border: none;
+  width: 100%;
+  top: 45%;
+  z-index: 5;
+}
+#y-axis {
+  position: absolute;
+  background-color: red;
+  height: 2px;
+  border: none;
+  width: 100%;
+  top: 45%;
+  z-index: 5;
+  transform: rotate(90deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  background: aquamarine;
+}
+.circle {
+  background-color: pink;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+  left: 130px;
+  top: 130px;
+  /* transform: translate(-13px, -13px); */
+}
+
+.circle button#open {
+}
+.circle button#close {
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+
+li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+  transition-delay: 0.3s;
+}
+
+.container.show-nav + nav li {
+  transform: translate(0);
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}

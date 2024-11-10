@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --empty-line-fill: rgb(121, 119, 122);
+  --filled-line-fill: rgb(144, 88, 172);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(230, 214, 214);
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.main-container {
+  min-width: 400px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 50px;
+}
+.steps-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.btns-container {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  padding: 0.25rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--filled-line-fill);
+  font-weight: bold;
+  font-size: 1rem;
+}
+.btn:active {
+  transform: scale(0.95);
+}
+.btn:disabled {
+  color: var(--empty-line-fill);
+}
+#next {
+  margin-left: 0.5rem;
+}
+#hr,
+#active-hr {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border: none;
+  background-color: #fff;
+  top: 7.5px;
+}
+.step {
+  background-color: #fff;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  padding: 15px;
+  border: var(--empty-line-fill) 2px solid;
+  transition: border 1s ease-in;
+}
+.step.active {
+  border: var(--filled-line-fill) 2px solid;
+}
+#active-hr {
+  width: 0%;
+  background-color: var(--filled-line-fill);
+  transition: width 1s ease-in;
+}
+
+.container {
+  background: peru;
+}
